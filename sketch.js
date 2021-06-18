@@ -34,7 +34,11 @@ function draw() {
 
     
     //Write condition here to evalute if tom and jerry collide
-if
+if(cat1.x-mouse1.x<cat1.width/2+mouse1.width/2)
+{ mouse1.addAnimation("mouseRunning",mouseImg2);
+  mouse1.changeAnimation("mouseRunning");
+  cat1.velocityX=0;
+}
     drawSprites();
 }
 
@@ -44,7 +48,7 @@ function keyPressed(){
   //For moving and changing animation write code here
 if(keyCode === RIGHT_ARROW)
 {
-  cat1.addAnimation("catRunning",mouseImg2);
+  cat1.addAnimation("catRunning",catImg2);
   cat1.changeAnimation("catRunning");
   cat1.velocityX=2;
 }
